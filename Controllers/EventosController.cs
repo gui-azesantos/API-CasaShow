@@ -104,7 +104,7 @@ namespace ApiRest.Controllers
             return Ok (local);
         }
         /// <summary>
-        /// Listaer eventos por nome descendente
+        /// Listar eventos por nome descendente
         /// </summary>
         /// <returns></returns>
         [HttpGet ("nome/desc")]
@@ -113,7 +113,7 @@ namespace ApiRest.Controllers
             return Ok (local);
         }
         /// <summary>
-        /// Listar eventos por ID
+        /// Listar evento por ID
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
@@ -125,7 +125,7 @@ namespace ApiRest.Controllers
             } catch (Exception) {
 
                 Response.StatusCode = 404;
-                return new ObjectResult (new { msg = "ID Inválido" });
+                return new ObjectResult (new { msg = "ID inválido" });
             }
 
         }
@@ -142,7 +142,7 @@ namespace ApiRest.Controllers
             if (eTemp != null) {
                 try {
                     if (eTemp.CasaDeShowID == 0) {
-                        return new ObjectResult (new { msg = "O Local do Evento não existe!" });
+                        return new ObjectResult (new { msg = "O local do evento não existe!" });
                     }
                     Evento e = new Evento ();
                     e.Nome = eTemp.Nome;
@@ -161,7 +161,7 @@ namespace ApiRest.Controllers
                     return new ObjectResult (new { msg = "Evento criado com sucesso!" });
                 } catch (Exception) {
                     Response.StatusCode = 400;
-                    return BadRequest (new { msg = "Verifique se o ID do evento está correto" });
+                    return BadRequest (new { msg = "Verifique se o ID da casa de show está correto" });
                 }
             }
             return BadRequest (new { msg = "Verifique se as informações do evento estão corretas" });
@@ -186,7 +186,7 @@ namespace ApiRest.Controllers
                         } else {
                             evento.Nome = evento.Nome;
                             Response.StatusCode = 404;
-                            return new ObjectResult (new { msg = "Nome Inválido" });
+                            return new ObjectResult (new { msg = "Nome inválido" });
                         }
                     }
                     if (ptemp.Capacidade != 0) {
@@ -195,7 +195,7 @@ namespace ApiRest.Controllers
                         } else {
                             evento.Capacidade = evento.Capacidade;
                             Response.StatusCode = 404;
-                            return new ObjectResult (new { msg = "Capaidade Inválida" });
+                            return new ObjectResult (new { msg = "Capaidade inválida" });
                         }
                     }
                     if (ptemp.Preco != 0) {
@@ -204,7 +204,7 @@ namespace ApiRest.Controllers
                         } else {
                             evento.Preco = evento.Preco;
                             Response.StatusCode = 404;
-                            return new ObjectResult (new { msg = "Preço Inválida" });
+                            return new ObjectResult (new { msg = "Preço inválida" });
                         }
                     }
 
@@ -213,7 +213,7 @@ namespace ApiRest.Controllers
                             evento.CasaDeShow = database.Local.First (p => p.Id == ptemp.CasaDeShowID);
                         } else {
                             Response.StatusCode = 404;
-                            return new ObjectResult (new { msg = "Local de inválido" });
+                            return new ObjectResult (new { msg = "Local inválido" });
                         }
                     }
                     if (ptemp.Estilo != 0) {
@@ -222,7 +222,7 @@ namespace ApiRest.Controllers
                         } else {
                             evento.Estilo = evento.Estilo;
                             Response.StatusCode = 404;
-                            return new ObjectResult (new { msg = "Estilo de Inválido" });
+                            return new ObjectResult (new { msg = "Estilo de inválido" });
                         }
                     }
 
@@ -237,16 +237,16 @@ namespace ApiRest.Controllers
                     }
 
                     database.SaveChanges ();
-                    return Ok (new { msg = "Evento Atualizado!" });
+                    return Ok (new { msg = "Evento atualizado!" });
 
                 } catch (System.Exception) {
                     Response.StatusCode = 400;
-                    return new ObjectResult (new { msg = "Requisição Inválida" });
+                    return new ObjectResult (new { msg = "Requisição inválida" });
                 }
 
             } else {
                 Response.StatusCode = 404;
-                return new ObjectResult (new { msg = "ID Inválido" });
+                return new ObjectResult (new { msg = "ID inválido" });
             }
 
         }
@@ -278,7 +278,7 @@ namespace ApiRest.Controllers
             [MinLength (2, ErrorMessage = "Nome curto demais.")]
             public string Nome { get; set; }
 
-            [Range (10, 1000000, ErrorMessage = "Capacidade Inválida.")]
+            [Range (10, 1000000, ErrorMessage = "Capacidade inválida.")]
             public int Capacidade { get; set; }
 
             [Required (ErrorMessage = "A data é obrigatória.")]

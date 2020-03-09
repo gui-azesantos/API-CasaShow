@@ -52,7 +52,7 @@ namespace Projeto_Casa.Controllers.API {
 
         }
         /// <summary>
-        /// Listar Local por ID 
+        /// Listar local por ID 
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
@@ -69,7 +69,7 @@ namespace Projeto_Casa.Controllers.API {
 
         }
         /// <summary>
-        /// Listar Local por Nome
+        /// Listar local por Nome
         /// </summary>
         /// <param name="nome"></param>
         /// <returns></returns>
@@ -87,7 +87,7 @@ namespace Projeto_Casa.Controllers.API {
         }
 
         /// <summary>
-        /// Criar Local (Necessita Autorização)
+        /// Criar local (Necessita Autorização)
         /// </summary>
         /// <param name="lTemp"></param>
         /// <returns></returns>
@@ -154,7 +154,7 @@ namespace Projeto_Casa.Controllers.API {
 
                 } catch (System.Exception) {
                     Response.StatusCode = 404;
-                    return new ObjectResult (new { msg = "Requisição Inválida!" });
+                    return new ObjectResult (new { msg = "Requisição inválida!" });
                 }
 
             } else {
@@ -164,7 +164,7 @@ namespace Projeto_Casa.Controllers.API {
         }
 
         /// <summary>
-        /// Deletar Local (Necessita Autorização)
+        /// Deletar local (Necessita Autorização)
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>   

@@ -4,46 +4,6 @@
         <name>API-Projeto-Casa</name>
     </assembly>
     <members>
-        <member name="M:ApiRest.Controllers.UsuarioController.Get">
-            <summary>
-            Listar usuário
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:ApiRest.Controllers.UsuarioController.Get(System.Int32)">
-            <summary>
-            Lista usuário por ID
-            </summary>
-            <param name="id"></param>
-            <returns></returns>
-        </member>
-        <member name="M:ApiRest.Controllers.UsuarioController.Cadastro(API_Projeto_Casa.Models.Usuario)">
-            <summary>
-            Cadastro de usuário
-            </summary>
-            <param name="user"></param>
-            <returns></returns>
-        </member>
-        <member name="M:ApiRest.Controllers.UsuarioController.Login(API_Projeto_Casa.Models.Usuario)">
-            <summary>
-            Login
-            </summary>
-            <param name="credenciais"></param>
-            <returns></returns>
-        </member>
-        <member name="M:ApiRest.Controllers.VendasController.GetUser">
-            <summary>
-            Listar vendas 
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:ApiRest.Controllers.VendasController.GetUser(System.Int32)">
-            <summary>
-            Listar vendas por ID
-            </summary>
-            <param name="id"></param>
-            <returns></returns>
-        </member>
         <member name="M:ApiRest.Controllers.EventosController.Get">
             <summary>
             Listar Eventos
@@ -94,13 +54,13 @@
         </member>
         <member name="M:ApiRest.Controllers.EventosController.GetNomeDesc">
             <summary>
-            Listaer eventos por nome descendente
+            Listar eventos por nome descendente
             </summary>
             <returns></returns>
         </member>
         <member name="M:ApiRest.Controllers.EventosController.Get(System.Int32)">
             <summary>
-            Listar eventos por ID
+            Listar evento por ID
             </summary>
             <param name="id"></param>
             <returns></returns>
@@ -126,6 +86,46 @@
             <param name="id"></param>
             <returns></returns>
         </member>
+        <member name="M:ApiRest.Controllers.UsuarioController.Get">
+            <summary>
+            Listar usuários
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ApiRest.Controllers.UsuarioController.Get(System.Int32)">
+            <summary>
+            Lista usuário por ID
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiRest.Controllers.UsuarioController.Cadastro(API_Projeto_Casa.Models.Usuario)">
+            <summary>
+            Cadastro de usuário
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiRest.Controllers.UsuarioController.Login(API_Projeto_Casa.Models.Usuario)">
+            <summary>
+            Login
+            </summary>
+            <param name="credenciais"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiRest.Controllers.VendasController.GetUser">
+            <summary>
+            Listar vendas 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ApiRest.Controllers.VendasController.GetUser(System.Int32)">
+            <summary>
+            Listar venda por ID
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
         <member name="M:Projeto_Casa.Controllers.API.LocalController.Get">
             <summary>
             Listar Local 
@@ -146,21 +146,21 @@
         </member>
         <member name="M:Projeto_Casa.Controllers.API.LocalController.GetId(System.Int32)">
             <summary>
-            Listar Local por ID 
+            Listar local por ID 
             </summary>
             <param name="id"></param>
             <returns></returns>
         </member>
         <member name="M:Projeto_Casa.Controllers.API.LocalController.GetNome(System.String)">
             <summary>
-            Listar Local por Nome
+            Listar local por Nome
             </summary>
             <param name="nome"></param>
             <returns></returns>
         </member>
         <member name="M:Projeto_Casa.Controllers.API.LocalController.Post(Projeto_Casa.Controllers.API.LocalController.LocalTemp)">
             <summary>
-            Criar Local (Necessita Autorização)
+            Criar local (Necessita Autorização)
             </summary>
             <param name="lTemp"></param>
             <returns></returns>
@@ -174,7 +174,7 @@
         </member>
         <member name="M:Projeto_Casa.Controllers.API.LocalController.Delete(System.Int32)">
             <summary>
-            Deletar Local (Necessita Autorização)
+            Deletar local (Necessita Autorização)
             </summary>
             <param name="id"></param>
             <returns></returns>   

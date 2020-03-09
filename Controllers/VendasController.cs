@@ -31,7 +31,7 @@ namespace ApiRest.Controllers {
             return Ok (local);
         }
         /// <summary>
-        /// Listar vendas por ID
+        /// Listar venda por ID
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>

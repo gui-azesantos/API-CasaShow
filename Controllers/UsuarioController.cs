@@ -19,7 +19,7 @@ namespace ApiRest.Controllers {
             this.database = database;
         }
         /// <summary>
-        /// Listar usuário
+        /// Listar usuários
         /// </summary>
         /// <returns></returns>
         [HttpGet]

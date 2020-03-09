@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\GEDO\\Desktop\\Visual Studio Code\\API-CasaShow\\API-Projeto-Casa.csproj": {}
+    "C:\\Users\\GEDO\\Desktop\\Visual Studio Code\\API-CasaShow\\API-Projeto-Casa.csproj": {}
   },
   "projects": {
-    "c:\\Users\\GEDO\\Desktop\\Visual Studio Code\\API-CasaShow\\API-Projeto-Casa.csproj": {
+    "C:\\Users\\GEDO\\Desktop\\Visual Studio Code\\API-CasaShow\\API-Projeto-Casa.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\GEDO\\Desktop\\Visual Studio Code\\API-CasaShow\\API-Projeto-Casa.csproj",
+        "projectUniqueName": "C:\\Users\\GEDO\\Desktop\\Visual Studio Code\\API-CasaShow\\API-Projeto-Casa.csproj",
         "projectName": "API-Projeto-Casa",
-        "projectPath": "c:\\Users\\GEDO\\Desktop\\Visual Studio Code\\API-CasaShow\\API-Projeto-Casa.csproj",
+        "projectPath": "C:\\Users\\GEDO\\Desktop\\Visual Studio Code\\API-CasaShow\\API-Projeto-Casa.csproj",
         "packagesPath": "C:\\Users\\GEDO\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\GEDO\\Desktop\\Visual Studio Code\\API-CasaShow\\obj\\",
+        "outputPath": "C:\\Users\\GEDO\\Desktop\\Visual Studio Code\\API-CasaShow\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\GEDO\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -44,7 +44,7 @@
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[3.1.1, )"
+              "version": "[3.1.2, )"
             },
             "Microsoft.IdentityModel.Tokens": {
               "target": "Package",
