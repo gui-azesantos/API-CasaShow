@@ -94,7 +94,7 @@
         </member>
         <member name="M:ApiRest.Controllers.UsuarioController.Get(System.Int32)">
             <summary>
-            Lista usuário por ID
+            Lista usuário por Username
             </summary>
             <param name="id"></param>
             <returns></returns>

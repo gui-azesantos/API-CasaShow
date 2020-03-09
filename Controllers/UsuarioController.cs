@@ -24,12 +24,14 @@ namespace ApiRest.Controllers {
         /// <returns></returns>
         [HttpGet]
         public IActionResult Get () {
-            var user = database.Usuario.Select (p => p.Id + " " + p.Email).ToList ();
+            
+            var user = database.Usuario.Select(p=> p.Id.ToString() + " " + p.Email).ToList();
+
             return Ok (user); //Status code = 200 && Dados 
         }
 
         /// <summary>
-        /// Lista usuário por ID
+        /// Lista usuário por Username
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
@@ -40,7 +42,7 @@ namespace ApiRest.Controllers {
                 return Ok (user); //Status code = 200 && Dados 
             } catch (System.Exception) {
                 Response.StatusCode = 404;
-                return new ObjectResult ("");
+                return new ObjectResult ("Usuário não encontrado!");
             }
 
         }

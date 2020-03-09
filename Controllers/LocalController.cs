@@ -206,5 +206,4 @@ namespace Projeto_Casa.Controllers.API {
 
         }
     }
-
 }
