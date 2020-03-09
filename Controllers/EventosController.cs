@@ -135,6 +135,7 @@ namespace ApiRest.Controllers
         /// </summary>
         /// <param name="eTemp"></param>
         /// <returns></returns>
+        
         [Authorize]
         [HttpPost]
         public IActionResult Post ([FromBody] EventoTemp eTemp) {

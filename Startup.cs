@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Text;
 using System.Threading.Tasks;
 using API_Projeto_Casa.Data;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -14,6 +16,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.IdentityModel.Tokens;
 
 namespace API_Projeto_Casa {
     public class Startup {
@@ -25,8 +28,25 @@ namespace API_Projeto_Casa {
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices (IServiceCollection services) {
-            services.AddControllers ();
             services.AddDbContext<ApplicationDbContext> (options => options.UseMySql (Configuration.GetConnectionString ("DefaultConnection")));
+            services.AddControllers ();
+
+            //Autenticação JWT
+            string Key = "ProjetoApiEvento.com";
+            var KeySimetrica = new SymmetricSecurityKey (Encoding.UTF8.GetBytes (Key));
+
+            services.AddAuthentication (JwtBearerDefaults.AuthenticationScheme).AddJwtBearer (options => {
+                //Como ler o Token JWT
+                options.TokenValidationParameters = new TokenValidationParameters {
+                ValidateIssuer = true,
+                ValidateAudience = true,
+                ValidateIssuerSigningKey = true,
+                //Dados de validação JWT
+                ValidIssuer = "Eventos.com",
+                ValidAudience = "Admin",
+                IssuerSigningKey = KeySimetrica
+                };
+            });
 
             //Swagger
             services.AddSwaggerGen (config => {
@@ -44,7 +64,7 @@ namespace API_Projeto_Casa {
             }
 
             app.UseHttpsRedirection ();
-
+            app.UseAuthentication ();
             app.UseRouting ();
 
             app.UseAuthorization ();
